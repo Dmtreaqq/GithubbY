@@ -35,7 +35,7 @@ class SearchVC: UIViewController {
     
     @objc private func pushFollowersVC() {
         guard !isUsernameEmpty else {
-            print("Error no name")
+            presentGHAlertOnMainThread(title: "No user", description: "Please enter the user that we know who to look for", buttonTitle: "Proceed")
             return
         }
         
