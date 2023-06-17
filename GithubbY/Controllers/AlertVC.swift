@@ -2,7 +2,7 @@ import UIKit
 
 class AlertVC: UIViewController {
     
-    let containerView = UIView()
+    let containerView = GHAlertView()
     let titleLabel = GHTitleLabel(textAlignment: .center, fontSize: 20)
     let descriptionLabel = GHBodyLabel(textAlignment: .center)
     let actionButton = GHButton(backgroundColor: .systemPink, title: "O")
@@ -38,12 +38,6 @@ class AlertVC: UIViewController {
     func configureContainerView() {
         view.addSubview(containerView)
         
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.layer.cornerRadius = 10
-        containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.white.cgColor
-        containerView.backgroundColor = .systemBackground
-        
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -55,7 +49,6 @@ class AlertVC: UIViewController {
     func configureTitleLabel() {
         containerView.addSubview(titleLabel)
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = alertTitle ?? "Something went wrong"
         
         NSLayoutConstraint.activate([
