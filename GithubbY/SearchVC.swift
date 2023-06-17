@@ -8,10 +8,11 @@
 import UIKit
 
 class SearchVC: UIViewController {
-
     let logoImageView = UIImageView()
     let usernameTextField = GHTextField()
     let getFollowersButton = GHButton(backgroundColor: .systemGreen, title: "Get Followers")
+    
+    var isUsernameEmpty: Bool { return usernameTextField.text!.isEmpty }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,11 @@ class SearchVC: UIViewController {
     }
     
     @objc private func pushFollowersVC() {
+        guard !isUsernameEmpty else {
+            print("Error no name")
+            return
+        }
+        
         let followersVC = FollowersVC()
         followersVC.username = usernameTextField.text
         followersVC.title = usernameTextField.text
