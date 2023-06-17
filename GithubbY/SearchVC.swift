@@ -19,11 +19,17 @@ class SearchVC: UIViewController {
         configureLogoImageView()
         configureTextField()
         configureGetFollowersButton()
+        dismissKeyboardTapGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func dismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     private func configureLogoImageView() {
@@ -43,6 +49,8 @@ class SearchVC: UIViewController {
     private func configureTextField() {
         view.addSubview(usernameTextField)
         
+        usernameTextField.delegate = self
+        
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 80),
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -60,5 +68,13 @@ class SearchVC: UIViewController {
             getFollowersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             getFollowersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
         ])
+    }
+    
+    
+}
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }
