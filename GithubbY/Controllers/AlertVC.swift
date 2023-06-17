@@ -1,6 +1,6 @@
 import UIKit
 
-class GHAlertVC: UIViewController {
+class AlertVC: UIViewController {
     
     let containerView = UIView()
     let titleLabel = GHTitleLabel(textAlignment: .center, fontSize: 20)
