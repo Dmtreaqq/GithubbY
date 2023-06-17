@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		63431A102A3CE05E00E131CC /* GHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431A0F2A3CE05D00E131CC /* GHButton.swift */; };
 		63431A122A3CE55100E131CC /* GHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431A112A3CE55100E131CC /* GHTextField.swift */; };
+		63431A142A3D872600E131CC /* FollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431A132A3D872600E131CC /* FollowersVC.swift */; };
 		636C80622A336CC7008E8BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636C80612A336CC7008E8BA1 /* AppDelegate.swift */; };
 		636C80642A336CC7008E8BA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636C80632A336CC7008E8BA1 /* SceneDelegate.swift */; };
 		636C806B2A336CC8008E8BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636C806A2A336CC8008E8BA1 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		63431A0F2A3CE05D00E131CC /* GHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHButton.swift; sourceTree = "<group>"; };
 		63431A112A3CE55100E131CC /* GHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTextField.swift; sourceTree = "<group>"; };
+		63431A132A3D872600E131CC /* FollowersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersVC.swift; sourceTree = "<group>"; };
 		636C805E2A336CC7008E8BA1 /* GithubbY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubbY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636C80612A336CC7008E8BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		636C80632A336CC7008E8BA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				636C80772A337D21008E8BA1 /* FavoritesVC.swift */,
 				63431A0F2A3CE05D00E131CC /* GHButton.swift */,
 				63431A112A3CE55100E131CC /* GHTextField.swift */,
+				63431A132A3D872600E131CC /* FollowersVC.swift */,
 			);
 			path = GithubbY;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				63431A102A3CE05E00E131CC /* GHButton.swift in Sources */,
 				636C80782A337D21008E8BA1 /* FavoritesVC.swift in Sources */,
+				63431A142A3D872600E131CC /* FollowersVC.swift in Sources */,
 				63431A122A3CE55100E131CC /* GHTextField.swift in Sources */,
 				636C80762A337CD4008E8BA1 /* SearchVC.swift in Sources */,
 				636C80622A336CC7008E8BA1 /* AppDelegate.swift in Sources */,
