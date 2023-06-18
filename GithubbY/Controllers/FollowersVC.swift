@@ -12,7 +12,7 @@ class FollowersVC: UIViewController {
         
         NetworkManager.shared.getFollowers(for: username, page: 1) { followers, error in
             guard let followers else {
-                self.presentGHAlertOnMainThread(title: "Bad Stuff Happened", description: error!, buttonTitle: "Ok")
+                self.presentGHAlertOnMainThread(title: "Bad Stuff Happened", description: error!.rawValue, buttonTitle: "Ok")
                 return
             }
             
