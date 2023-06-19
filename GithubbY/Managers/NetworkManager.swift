@@ -1,10 +1,11 @@
-import Foundation
+import UIKit
 
 class NetworkManager {
     private init() { }
-    
     static let shared = NetworkManager()
-    let baseUrl = "https://api.github.com"
+    private let baseUrl = "https://api.github.com"
+    
+    let cache = NSCache<NSString, UIImage>()
     
     func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GHError>) -> Void) {
         let endpoint = baseUrl + "/users/\(username)/followers?per_page=100&page=\(page)"
