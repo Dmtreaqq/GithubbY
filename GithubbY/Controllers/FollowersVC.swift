@@ -2,17 +2,13 @@ import UIKit
 
 class FollowersVC: UIViewController {
     
-    enum Section {
-        case main
-    }
+    enum Section { case main }
     
     var username: String!
-    
     var followers: [Follower] = []
-    
     var followersCollectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -23,7 +19,6 @@ class FollowersVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -33,25 +28,11 @@ class FollowersVC: UIViewController {
     }
     
     private func configureCollectionView() {
-        followersCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        followersCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(view: view))
         view.addSubview(followersCollectionView)
         
         followersCollectionView.backgroundColor = .systemBackground
         followersCollectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
-    }
-    
-    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
-        let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minimumItemSpacing: CGFloat = 10
-        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
-        let itemWidth = availableWidth / 3
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        
-        return flowLayout
     }
     
     func getFollowers() {
@@ -71,9 +52,7 @@ class FollowersVC: UIViewController {
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: followersCollectionView, cellProvider: { collectionView, indexPath, follower in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
-            
             cell.set(follower: follower)
-            
             return cell
         })
     }
