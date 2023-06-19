@@ -17,15 +17,20 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
         configureLogoImageView()
         configureTextField()
         configureGetFollowersButton()
         createDismissKeyboardTapGesture()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        // Comment this to remove delay of tabBar background appearing, but you will lost the color
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     private func createDismissKeyboardTapGesture() {
