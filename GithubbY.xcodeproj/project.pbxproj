@@ -34,6 +34,7 @@
 		638117082A4C3D7500C41761 /* GHSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638117072A4C3D7500C41761 /* GHSecondaryTitleLabel.swift */; };
 		6381170A2A4C57D200C41761 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638117092A4C57D200C41761 /* Constants.swift */; };
 		6381170C2A4C651600C41761 /* GHItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381170B2A4C651600C41761 /* GHItemInfoView.swift */; };
+		6381170E2A4C6B1800C41761 /* GHItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381170D2A4C6B1800C41761 /* GHItemInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		638117072A4C3D7500C41761 /* GHSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		638117092A4C57D200C41761 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6381170B2A4C651600C41761 /* GHItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHItemInfoView.swift; sourceTree = "<group>"; };
+		6381170D2A4C6B1800C41761 /* GHItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHItemInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				63431A192A3D9F4C00E131CC /* AlertVC.swift */,
 				638117052A4C3CF800C41761 /* GHUserInfoHeaderVC.swift */,
+				6381170D2A4C6B1800C41761 /* GHItemInfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				638117082A4C3D7500C41761 /* GHSecondaryTitleLabel.swift in Sources */,
 				636C80782A337D21008E8BA1 /* FavoritesVC.swift in Sources */,
 				63431A142A3D872600E131CC /* FollowersVC.swift in Sources */,
+				6381170E2A4C6B1800C41761 /* GHItemInfoVC.swift in Sources */,
 				63431A1C2A3DB0B500E131CC /* UIViewController+Ext.swift in Sources */,
 				63431A122A3CE55100E131CC /* GHTextField.swift in Sources */,
 				636C80762A337CD4008E8BA1 /* SearchVC.swift in Sources */,
